@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/Style.css" rel="stylesheet" type="text/css" />
+        <meta charset="UTF-8">
+        <title>yesrinote</title>
+    </head>
+    <body>
+       
+        <header>
+           <h1>welcome to yesrinote</h1>
+        </header>
+        <main>
+            <div  class="container">
+                <% notes.forEach(note=>{ %>
+                <div  class="item">
+                    <form onsubmit="event.preventDefault()">
+                        <input type="text" value="<%= note.title %>"><br>
+                        <input type="text" value="<%= note.name %>"><br>
+                        <textarea id="editor" name="text"><%= note.text %></textarea>
+                        <input id="<%= note._id %>" class="save-btn" type="submit" value="Save" onclick="saveUpdate(this)">
+                    </form>
+                    <div>
+                        <h2 class="title"><%= note.title %></h2>
+                        <h4 class="name">written by <%= note.name %></h4>
+                        <p><%= note.text %></p>
+                        <button onclick="update(this)" class="up-btn">edit</button>
+                    </div>
+                    <button id="<%= note._id %>" onclick="deleteNote(this)" class="de-btn">delete</button>   
+                </div>
+               <% }) %>
+                <div  class="item">
+                    <form method="POST" action="/newNote">
+                        <input type="text" name="title" placeholder="title" required>
+                        <input type="text" name="name"  placeholder="name" required>
+                        <textarea name="text" placeholder="some text" required></textarea>
+                        <input id="save-btn" class="save-btn" type="submit" value="Save">
+                    </form>
+                    <div>
+                        <h2>new note</h2>
+                        <button onclick="update(this)" id="new-note-btn" class="up-btn">create new note</button>
+                    </div>       
+                </div>
+            </div>
+          
+        </main>
+        <script src="/js/note.js"></script>
+		
+    </body>
+</html>
