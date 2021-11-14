@@ -1,0 +1,124 @@
+html, body{
+    margin:0; 
+    padding:0; 
+    background-color: #fcde67;
+    font-family: tahoma;
+}
+header{
+    max-width: 800px;
+    height: 50px;
+    background-color: #353333;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+}
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+*{ 
+    box-sizing: border-box;
+}
+h1, h4{
+    margin: 0;
+    color: white;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; 
+   
+}
+.item{   
+    position: relative;
+    flex: 40%;
+    margin:5px 5px;
+    padding: 25px;
+    height: 500px;
+    background-color: #3a3a3a;
+    box-shadow: 0 6px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+    border-radius: 5px;
+}
+.item p{
+    height: 310px;
+    background-color: #272626;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    line-height: 1.5;
+    
+}
+.de-btn{
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+}
+.up-btn, .save-btn{
+    position: absolute;
+    bottom: 5px;
+    right: 80px;
+}
+#new-note-btn, #save-btn{
+    right: 15px;
+}
+form{
+    display: none;
+    flex: 40%;
+    margin:5px 5px;
+    padding: 5px;
+    height: 500px;
+}
+input[type=text]{
+    width: 100%;
+    padding: 5px 5px;
+    border: 2px solid #c5c5c5;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+textarea{
+    resize: none;
+    height: 310px;
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid #c5c5c5;
+}
+button, .save-btn{
+    width: 20%;
+    background-color: #272626;
+    color: white;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 7px;
+}
+p, h2, h4{
+    word-break: break-all;
+    overflow:auto;
+}
+.name{
+    padding: 2px;
+    background-color: #272626;
+    color: white;
+    border: 2px solid black;
+    font-size: 15px;
+    box-shadow: 0 6px 8px 0 #00000033;
+    border-radius: 5px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #272626; 
+
+}
+  
