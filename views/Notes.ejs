@@ -27,7 +27,7 @@
                         <p><%= note.text %></p>
                         <button onclick="update(this)" class="up-btn">edit</button>
                     </div>
-                    <button id="<%= note._id %>" onclick="deleteNote(this)" class="de-btn">delete</button>   
+                    <button onclick="deleteNote('<%= note._id %>')" class="de-btn">delete</button>   
                 </div>
                <% }) %>
                 <div  class="item">

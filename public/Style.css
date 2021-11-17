@@ -60,7 +60,7 @@ h2{
 .up-btn, .save-btn{
     position: absolute;
     bottom: 5px;
-    right: 80px;
+    right: 25%;
 }
 #new-note-btn, #save-btn{
     right: 15px;
@@ -97,7 +97,8 @@ button, .save-btn{
     margin-right: 7px;
 }
 p, h2, h4{
-    word-break: break-all;
+    
+    word-break: break-word;
     overflow:auto;
 }
 .name{
@@ -122,3 +123,8 @@ p, h2, h4{
 
 }
   
+@media (max-width: 700px) {
+    .item {
+      flex: 100%;
+    }
+  }

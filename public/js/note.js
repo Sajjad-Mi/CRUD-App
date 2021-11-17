@@ -24,14 +24,14 @@ function saveUpdate(formElm){
         formElm.parentElement.style.display="none";        
     })
     
-    //then(window.location.href="/notes")
+   
 }
 
-function deleteNote(elm){
+function deleteNote(id){
     const endpoint = 'deleteNote';
     fetch(endpoint, {
         method: 'DELETE',
-        body: JSON.stringify({ noteId: elm.id }),
+        body: JSON.stringify({ noteId: id }),
         headers: {'Content-Type': 'application/json'}
     }).then(window.location.href="/notes");
 }
