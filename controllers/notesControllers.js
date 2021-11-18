@@ -13,7 +13,7 @@ module.exports.note_post = async (req , res) =>{
 
 module.exports.note_delete = async (req , res) =>{
     await Note.findByIdAndRemove({_id:req.body.noteId});
-    res.redirect('/notes');
+    res.status(200).json('note was deleted');
 }
 
 module.exports.note_put = async (req , res) =>{   

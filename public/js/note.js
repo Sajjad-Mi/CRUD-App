@@ -33,5 +33,10 @@ function deleteNote(id){
         method: 'DELETE',
         body: JSON.stringify({ noteId: id }),
         headers: {'Content-Type': 'application/json'}
-    }).then(window.location.href="/notes");
+    }).then(response => response.json())
+    .then(data=>{
+        if(data==="note was deleted"){
+            window.location.href="/notes"
+        }
+    })
 }
